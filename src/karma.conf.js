@@ -11,10 +11,7 @@ module.exports = function (config) {
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma'),
-
-      require('karma-phantomjs-launcher'),  /* add this line to disable the karma-phantomjs-launcher*/
-      // require('@angular/cli/plugins/karma')
-      require('karma-junit-reporter')/** juni reporter */,
+      require('karma-junit-reporter')/** xml reporter */,
       require('karma-htmlfile-reporter')/** html reporter */
 
     ],
@@ -27,10 +24,10 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
     junitReporter    : {
-      outputDir : require('path').join(__dirname, '../junit-report/test-result.xml'), /*'target/junit-reports/'*/
-      outputFile : 'test-result.xml'
+      outputDir : require('path').join(__dirname, '../test-reports') /**'target/junit-reports/'/*/
+      ,outputFile : 'text-result.xml'
     },
-    reporters: ['progress', 'kjhtml','html'],
+    reporters: ['progress', 'kjhtml','html', 'junit'],
     htmlReporter : {
       outputFile : require('path').join(__dirname, '../junit-html/unit.html'), /*'target/junit-reports/'*/
     },
@@ -38,7 +35,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['PhantomJS'],
+    browsers: ['ChromeHeadless'],
     singleRun: true
   });
 };
