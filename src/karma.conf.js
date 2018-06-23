@@ -24,8 +24,8 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
     junitReporter    : {
-      outputDir : require('path').join(__dirname, '../test-reports') /**'target/junit-reports/'/*/
-      ,outputFile : 'text-result.xml'
+      outputDir : require('path').join(__dirname, '../test-results') /**'target/junit-reports/'/*/
+      ,outputFile : 'test-result.xml'
     },
     reporters: ['progress', 'kjhtml','html', 'junit'],
     htmlReporter : {
