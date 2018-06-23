@@ -5,6 +5,10 @@
 /tmp
 /out-tsc
 
+#test
+/junit-html
+/junit-report
+
 # dependencies
 /node_modules
 
