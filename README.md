@@ -40,4 +40,5 @@ Publish Junit test result report
 test-result/junit/*/*.xml
 
 requires:
-npm g i @angular/cli 
+npm i @angular/cli -g
+npm i intl --save
