@@ -27,7 +27,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-##requires
+##Info
 
-npm i g @angular/cli 
-npm i @angular/material @angular/cdk --save 
+This simple angular-quickstart will give you unit testing results in html/xml and code coverage out of the box.
+Integrates with jenkins with the installation of the following plugins
+Jenkins, - install Cobertura Plugin, NodeJs Plugin
+
+Publish Cobertura Coverage Report
+test-result/coverage/cobertura-coverage.xml
+
+Publish Junit test result report
+test-result/junit/*/*.xml
+
+requires:
+npm g i @angular/cli 
