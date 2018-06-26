@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  submit() {
+    const result = true;
+    if (result) {
+      console.log('true');
+    } else {
+      console.log('false');
+    }
+
+  }
 }

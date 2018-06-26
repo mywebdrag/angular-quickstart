@@ -11,25 +11,25 @@ module.exports = function (config) {
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma'),
-      require('karma-junit-reporter')/** xml reporter */,
+      require('karma-junit-reporter')/** for jenkins xml reporter */,
       require('karma-htmlfile-reporter')/** html reporter */
-
     ],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+    reporters: ['coverage-istanbul','html', 'junit'],
+
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, '../coverage'),
-      reports: ['html', 'lcovonly'],
+      dir: require('path').join(__dirname, '../test-result/coverage'),
+      reports: ['cobertura', 'html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
     junitReporter    : {
-      outputDir : require('path').join(__dirname, '../test-results') /**'target/junit-reports/'/*/
-      ,outputFile : 'test-result.xml'
+      outputDir : require('path').join(__dirname, '../test-result/junit')
+      ,outputFile : 'result.xml'
     },
-    reporters: ['progress', 'kjhtml','html', 'junit'],
     htmlReporter : {
-      outputFile : require('path').join(__dirname, '../junit-html/unit.html'), /*'target/junit-reports/'*/
+      outputFile : require('path').join(__dirname, '../test-result/junit/result.html'),
     },
     port: 9876,
     colors: true,
