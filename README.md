@@ -42,3 +42,5 @@ test-result/junit/*/*.xml
 requires:
 npm i @angular/cli -g
 npm i intl --save
+npm i karma-jasmine-html-reporter karma-junit-reporter karma-htmlfile-reporter --save-dev
+
