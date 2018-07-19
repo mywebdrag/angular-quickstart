@@ -2,7 +2,7 @@ version: 0.2
 
 env:
     variables:
-        S3_BUCKET: "www.mywebdrag.com"
+        S3_BUCKET: "arn:aws:s3:::www.mywebdrag.com"
         APP_NAME: "angular-quickstart"
         BUILD_ENV : "prod"
 
@@ -25,6 +25,9 @@ phases:
         - yarn global add @angular/cli@6.0.8
         # Install node dependancies.
         - yarn install
+        # Run test
+        - yarn ng build --prod --build-optimizer --no-progress
+        - yarn ng test --watch=false --code-coverage
 
     build:
         commands:
