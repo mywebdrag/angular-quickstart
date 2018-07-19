@@ -2,7 +2,7 @@ version: 0.2
 
 env:
     variables:
-        S3_BUCKET: "arn:aws:s3:::www.mywebdrag.com"
+        S3_BUCKET: "www.mywebdrag.com"
         APP_NAME: "angular-quickstart"
         BUILD_ENV : "prod"
 
@@ -22,7 +22,7 @@ phases:
         - sudo apt-get update -y
         - sudo apt-get install -y yarn
         # Install Angular CLI, If you are not using Angular 6, install angular/cli@1.7.0 or lower, confirm by running ng -v inside your project folder
-        - yarn global add @angular/cli@6.0.8
+        - yarn global add @angular/cli
         # Install node dependancies.
         - yarn install
         # Run test
