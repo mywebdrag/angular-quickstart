@@ -27,7 +27,7 @@ phases:
         - yarn install
         # Run test
         - yarn ng build --prod --build-optimizer --no-progress
-        - yarn ng test --watch=false --code-coverage
+        #- yarn ng test --watch=false --code-coverage
 
     build:
         commands:
