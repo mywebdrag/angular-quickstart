@@ -3,7 +3,7 @@ version: 0.2
 env:
     variables:
         S3_BUCKET: "www.mywebdrag.com"
-        APP_NAME: "mywebdrag"
+        APP_NAME: "angular-quickstart"
         BUILD_ENV : "prod"
 
 phases:
